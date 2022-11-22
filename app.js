@@ -87,8 +87,8 @@ app.post("/login-user", async (req, res) => {
   });
 
 //--------
-const PORT=pro.env.PORT ||5000
-app.listen(PORT,()=>{
+
+app.listen("https://my-log-backend.herokuapp.com",()=>{
     console.log("server Started")
 });
 
