@@ -1,6 +1,8 @@
 const express =require("express");
 
 const app =express();
+const port = process.env.PORT || 5000
+
 const mongoose=require("mongoose")
 app.use(express.json());
 const cors = require("cors");
@@ -88,7 +90,7 @@ app.post("/login-user", async (req, res) => {
 
 //--------
 
-app.listen("https://my-log-backend.herokuapp.com",()=>{
+app.listen(port,()=>{
     console.log("server Started")
 });
 
