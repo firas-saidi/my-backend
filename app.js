@@ -1,4 +1,6 @@
 const express =require("express");
+require('dotenv').config()
+
 
 const app =express();
 const port = process.env.PORT || 5000
@@ -11,11 +13,10 @@ const bcrypt=require("bcryptjs")
 
 const jwt = require("jsonwebtoken");
 
-const JWT_SECRET =
-  "thisisforscretjwttokenfordecryptencryptandgivetoknezdsdnsfsnsddfdfdgfgg554545131";
+const JWT_SECRET =process.env.JWT_SECRET
 
 
-const mongoUrl ="mongodb+srv://myapp:123456aze@cluster0.bvnnruz.mongodb.net/?retryWrites=true&w=majority";
+const mongoUrl =process.env.mongoUrl
 
 mongoose.connect(mongoUrl,{
     useNewUrlParser : true
